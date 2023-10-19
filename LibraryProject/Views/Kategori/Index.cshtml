@@ -1,14 +1,32 @@
-﻿
+﻿@using LibraryProject.Models.Entity
+@model List<TBLKATEGORI>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 <br />
 <h2>Kategoriler</h2>
+<br />
 
 <table class="table table-hover">
     <tr>
-        <th></th>
+        <th>ID</th>
+        <th>Kategori Adı</th>
+        <th>Durumu</th>
+        <th>Güncelle</th>
+    </tr>W
+    @foreach (var item in Model)
+            {
+    <tr>
+        <td>@item.ID</td>
+        <td>@item.AD</td>
+        <td><a href="/Kategori/KategoriSil" class="btn btn-outline-danger">Pasif Yap</a></td>
+        <td><a href="/Kategori/KategoriGuncelle" class="btn btn-outline-warning">Güncelle</a></td>
+       
     </tr>
+            }
 </table>
 
+<a href="/Kategori/KategoriEkle" class="btn btn-outline-success">Kategori Ekle</a>
+<br />
+<br />

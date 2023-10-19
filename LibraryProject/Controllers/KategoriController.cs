@@ -15,5 +15,11 @@ namespace LibraryProject.Controllers
             var degerler = db.TBLKATEGORI.ToList();
             return View(degerler);
         }
+        public ActionResult KategoriEkle(TBLKATEGORI p)
+        {
+            db.TBLKATEGORI.Add(p);
+            db.SaveChanges();
+            return View();
+        }
     }
 }

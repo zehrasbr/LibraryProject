@@ -327,6 +327,7 @@
     <Content Include="web\assets\fonts\slick.ttf" />
     <Content Include="web\assets\fonts\slick.woff" />
     <Content Include="web\prepros.config" />
+    <Content Include="Views\Kategori\KategoriEkle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
