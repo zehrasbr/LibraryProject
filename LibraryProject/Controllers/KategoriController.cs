@@ -34,5 +34,10 @@ namespace LibraryProject.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult KategoriGetir(int id)
+        {
+            var ktg = db.TBLKATEGORI.Find(id);
+            return View("KategoriGetir", ktg);
+        }
     }
 }

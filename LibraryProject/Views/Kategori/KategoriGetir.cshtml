@@ -1,0 +1,22 @@
+﻿@model LibraryProject.Models.Entity.TBLKATEGORI
+@{
+    ViewBag.Title = "KategoriGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle","Kategori",FormMethod.Post))
+            {
+    <div style="margin-bottom:15px"></div>
+                <div class="form-group">
+                    @Html.LabelFor(k=>k.ID)
+                    @Html.TextBoxFor(k=>k.ID, new {@class="form-control"})
+                    <br />
+                    <b><h6>KATEGORİ ADI</h6></b>
+                    @Html.TextBoxFor(k=>k.AD,new {@class="form-control"})
+                </div>
+                <br />
+                <div>
+                    <button class="btn btn-outline-warning">Güncelle</button>
+                    <a href="/Kategori/Index/" class="btn btn-outline-dark">Geri</a>
+                </div>
+            }
