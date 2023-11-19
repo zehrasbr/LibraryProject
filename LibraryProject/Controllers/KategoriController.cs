@@ -39,5 +39,12 @@ namespace LibraryProject.Controllers
             var ktg = db.TBLKATEGORI.Find(id);
             return View("KategoriGetir", ktg);
         }
+        public ActionResult KategoriGuncelle(TBLKATEGORI p)
+        {
+            var ktg = db.TBLKATEGORI.Find(p.ID);
+            ktg.AD = p.AD;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
